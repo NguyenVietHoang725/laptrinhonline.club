@@ -2,13 +2,13 @@
 #include <string>
 using namespace std;
 
-struct ThoiGian 
-{
+#define hairy main
+
+struct ThoiGian {
     int ngay, thang, nam;
 };
 
-int main() 
-{
+int hairy() {
     ThoiGian tg;
     char slash; // Sử dụng kiểu char để lưu dấu '/'
     
@@ -19,31 +19,24 @@ int main()
     bool namNhuan = (tg.nam % 4 == 0 && (tg.nam % 100 != 0 || tg.nam % 400 == 0));
     
     // Xử lý tăng ngày
-    if ((tg.thang == 1 || tg.thang == 3 || tg.thang == 5 || tg.thang == 7 || tg.thang == 8 || tg.thang == 10) && tg.ngay == 31) 
-    {
+    if ((tg.thang == 1 || tg.thang == 3 || tg.thang == 5 || tg.thang == 7 || tg.thang == 8 || tg.thang == 10) && tg.ngay == 31) {
         tg.ngay = 1;
         tg.thang++;
-    } else if (tg.thang == 12 && tg.ngay == 31) 
-    {
+    } else if (tg.thang == 12 && tg.ngay == 31) {
         tg.ngay = 1;
         tg.thang = 1;
         tg.nam++;
-    } else if (tg.thang == 2) 
-    {
-        if ((namNhuan && tg.ngay == 29) || (!namNhuan && tg.ngay == 28)) 
-        {
+    } else if (tg.thang == 2) {
+        if ((namNhuan && tg.ngay == 29) || (!namNhuan && tg.ngay == 28)) {
             tg.ngay = 1;
             tg.thang++;
-        } else 
-        {
+        } else {
             tg.ngay++;
         }
-    } else if ((tg.thang == 4 || tg.thang == 6 || tg.thang == 9 || tg.thang == 11) && tg.ngay == 30) 
-    {
+    } else if ((tg.thang == 4 || tg.thang == 6 || tg.thang == 9 || tg.thang == 11) && tg.ngay == 30) {
         tg.ngay = 1;
         tg.thang++;
-    } else 
-    {
+    } else {
         tg.ngay++;
     }
     

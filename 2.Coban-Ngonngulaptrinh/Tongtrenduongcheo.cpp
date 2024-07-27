@@ -2,9 +2,10 @@
 #include <vector>
 using namespace std;
 
+#define hairy main
 #define int long long
 
-signed main() {
+signed hairy() {
     int n;
     cin >> n;
     vector<vector<int>> matrix(n, vector<int>(n));

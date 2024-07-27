@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main() 
+#define hairy main
+
+int hairy() 
 {
     int x, y;
     cin >> x >> y;
 
-    if (x <= y) 
-    {
+    if (x <= y) {
         cout << x << " " << (y - x) / 2;
-    } else 
-    {
+    } else {
         cout << y << " " << (x - y) / 2;
     }
 }

@@ -2,16 +2,16 @@
 #include <vector>
 #include <algorithm>
 
+#define hairy main
+
 using namespace std;
 
-int main()
-{
+int hairy() {
     int n; // Số người bạn
     cin >> n;
     
     vector<int> a(n); // Lưu trữ vị trí căn nhà
-    for(int i = 0; i < n; i++)
-    {
+    for(int i = 0; i < n; i++) {
         cin >> a[i];
     }
     
@@ -21,8 +21,7 @@ int main()
     int sum = 0;
     int k = n / 2; // Vị trí nằm ở giữa
     
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         sum += abs(a[k] - a[i]); 
     }
 

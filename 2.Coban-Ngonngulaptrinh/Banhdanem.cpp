@@ -1,24 +1,21 @@
 #include <iostream>
 #include <cmath>
 
+#define hairy main
+
 using namespace std;
 
-int main () 
-{
+int hairy() {
     int n, i;
     cin >> n;
 
-    if (n >= 1 && n <= 9)
-    {
+    if (n >= 1 && n <= 9) {
         cout << 1;
-    } else if (n > 9) 
-    {
+    } else if (n > 9) {
         i = n / 9;
-        if (n - 9 * i == 0)
-        {
+        if (n - 9 * i == 0) {
             cout << i;
-        } else if (n - 9 * i >= 1 && n - 9 * i < 9)
-        {
+        } else if (n - 9 * i >= 1 && n - 9 * i < 9) {
             cout << i + 1;
         }
     }
